@@ -60,6 +60,8 @@ It is tested and works with the followings CSS libraries:
 
 # Screenshots
 
+![almalinux-bernini-nginx](https://i.postimg.cc/FFn4c1wf/image.png)
+
 **almalinux-bernini-nginx is based on NGINdeX.io**
 
 - [StrapIndex](https://github.com/EthraZa/NGINdeX.io/tree/nginx-autoindex) - Bootstrap version that is based on
