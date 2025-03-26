@@ -6,17 +6,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" property="og:description"
-        content="AlmaLinux mirror creado para Bernini.DEV por Vasak Group. Servicio disponible para todos los usuarios de AlmaLinux." />
+        content="AlmaLinux mirror creado para VPS Universe por Vasak Group. Servicio disponible para todos los usuarios de AlmaLinux." />
     <meta name="twitter:description"
-        content="AlmaLinux mirror creado para Bernini.DEV por Vasak Group. Servicio disponible para todos los usuarios de AlmaLinux." />
+        content="AlmaLinux mirror creado para VPS Universe por Vasak Group. Servicio disponible para todos los usuarios de AlmaLinux." />
     <meta name="author" content="Vasak Group" />
-    <meta name="copyright" content="Bernini.DEV" />
-    <meta property="og:url" name="twitter:url" content="https://almalinux-mirror.bernini.dev/" />
+    <meta name="copyright" content="VPS Universe" />
+    <meta property="og:url" name="twitter:url" content="https://almalinux-mirror.vpsuniverse.net/" />
     <meta name="keywords" content="linux, almalinux, alma, alma linux, mirror, almalinux mirror," />
     <meta name="robots" content="index" />
-    <meta property="og:site_name" content="AlmaLinux Mirror | Powered by Bernini" />
-    <meta property="og:title" content="AlmaLinux Mirror | Powered by Bernini" />
-    <meta property="twitter:title" content="AlmaLinux Mirror | Powered by Bernini" />
+    <meta property="og:site_name" content="AlmaLinux Mirror | Powered by VPS Univserse" />
+    <meta property="og:title" content="AlmaLinux Mirror | Powered by VPS Univserse" />
+    <meta property="twitter:title" content="AlmaLinux Mirror | Powered by VPS Univserse" />
     <meta property="og:image" content="https://i.postimg.cc/FFn4c1wf/image.png" />
     <meta property="twitter:card" content="https://i.postimg.cc/FFn4c1wf/image.png" />
     <meta property="og:type" content="site" />
@@ -171,7 +171,7 @@
                 pathname.split('/').reduce(function (a, v, i, o) {
                     return a += ` / <a href="#" style="color:#FFF; font-weight: bold;" onclick="window.open(getHref('/${o.slice(1, i + 1).join('/')}'),'_self')">${v}</a> `;
                 }) +
-                `<a title="Back" href="#" onclick="window.open(getHref('${pathname.substring(0, pathname.slice(0, -1).lastIndexOf('/'))}'),'_self')"><span class="material-icons">arrow_back_ios_new</span></a>` +
+                `<a title="Back" href="#" style="color:#fff; font-weight: bold;" onclick="window.open(getHref('${pathname.substring(0, pathname.slice(0, -1).lastIndexOf('/'))}'),'_self')"><span class="material-icons">arrow_back_ios_new</span></a>` +
                 '</small>'
         }
 
@@ -190,7 +190,7 @@
                     ++n[1];
                     tblHtm += `<tr>
                             <td><span class="material-icons" title="Folder">folder</span><span class="dn">${entry.type}</span></td>
-                            <td><div title="...${entry.name.substr(-10)}"><a href="#" style="color:#FFF; font-weight: bold;" onclick="window.open(getHref('${url}'),'_self')">${entry.name}</a></div></td>
+                            <td><div title="...${entry.name.substr(-10)}"><a href="#" style="color:#000; font-weight: bold;" onclick="window.open(getHref('${url}'),'_self')">${entry.name}</a></div></td>
                             <td>${entry.mtime}</td>
                             <td></td>
                         </tr>`;
@@ -199,7 +199,7 @@
                     n[3] += entry.size;
                     tblHtm += `<tr>
                             <td><span class="material-icons" title="${entry.ext} File">insert_drive_file</span><span class="dn">${entry.type}</span></td>
-                            <td><div title="...${entry.name.substr(-10)}"><a download="${entry.name}" style="color:#FFF" href="${url}">${entry.name}</a></div>
+                            <td><div title="...${entry.name.substr(-10)}"><a download="${entry.name}" style="color:#000" href="${url}">${entry.name}</a></div>
                                     <span class="fr"><a download="${entry.name}" href="${url}"><span class="material-icons" title="Save ${entry.ext}">download</span></a>
                                     <a href="${url}" target="_blank"><span class="material-icons" title="Open ${entry.ext}">open_in_browser</span></a></span>
                             </td>
@@ -224,7 +224,7 @@
 
             $(c).innerHTML += tblHtm;
             if (n[0] == a.length) {
-                $(f).innerHTML = `<span>Powered By <a target="_blank" href="https://vasak.net.ar/">Vasak Group</a> &nbsp;&nbsp;&nbsp;</span>
+                $(f).innerHTML = `<span>Powered By <a target="_blank" style="color:#1c40f2; font-weight: bold;" href="https://vasak.net.ar/">Vasak Group</a> &nbsp;&nbsp;&nbsp;</span>
                         <span class="material-icons">folder_open</span><span>${n[1]}</span>
                         <span class="material-icons">description</span><span>${n[2]}</span>
                         <span class="material-icons">account_tree</span><span>${(n[1] + n[2])}<strong> : </strong> &nbsp;&nbsp;&nbsp;${humanFileSize(n[3], true, 3)}</span>`;
@@ -260,12 +260,13 @@
             flex-direction: column;
             flex-wrap: nowrap;
             flex-direction: column;
-            background: #1A1135;
-            color: #FFF;
+            background: #fff;
+            color: #000;
         }
 
         header {
             flex-shrink: 0;
+            background: linear-gradient(221deg, #0098EE 49%, #020202FA 100%)
         }
 
         header ul {
@@ -295,7 +296,9 @@
             flex-shrink: 0;
             text-align: right;
             margin: 0;
-            border-top: solid 1px #bd3f9c;
+            border-top: solid 1px #1c40f2;
+            background: #0098EE;
+            color: #fff;
             z-index: 4;
         }
 
@@ -317,7 +320,7 @@
         }
 
         .material-icons {
-            color: #bd3f9c;
+            color: #1c40f2;
         }
 
         th:first-child {
@@ -379,6 +382,7 @@
 
         #idx-filter {
             width: unset;
+            border:  solid 1px #1c40f2;
         }
 
         #idx-path {
@@ -400,7 +404,7 @@
         }
 
         .header {
-            background-color: #1A1135;
+            background-color: #0098EE;
         }
 
         .material-icons {
@@ -445,8 +449,8 @@
             height: 64px;
             margin: 8px;
             border-radius: 50%;
-            border: 6px solid #bd3f9c;
-            border-color: #bd3f9c transparent;
+            border: 6px solid #1c40f2;
+            border-color: #1c40f2 transparent;
             animation: lds 1.2s linear infinite;
         }
 
@@ -483,7 +487,7 @@
                 <input id="idx-filter" type="text" placeholder="Filter">
             </li>
             <li>
-                <img src="https://bernini.dev/wp-content/uploads/2024/11/Bernini.png" alt="Bernini.DEV" height="54" />
+                <img src="https://vpsuniverse.net/wp-content/uploads/2024/09/VPS-White.svg" alt="VPS Universe" height="54" />
             </li>
         </ul>
     </header>
